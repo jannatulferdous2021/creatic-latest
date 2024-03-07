@@ -41,7 +41,7 @@ const App = () => {
     setCart((currentCart) => {
       return currentCart.map((item) => {
         if (item.id === productId) {
-          return { ...item, quantity: +quantity }; // The unary plus (+) ensures the value is treated as a number
+          return { ...item, quantity: +quantity };
         }
         return item;
       });
@@ -79,7 +79,7 @@ const App = () => {
   const handleDecreaseQuantity = (productId) => {
     const updatedCart = cart.map((product) => {
       if (product.id === productId && product.quantity > 1) {
-        // Prevents quantity from going below 1
+
         return { ...product, quantity: product.quantity - 1 };
       }
       return product;
