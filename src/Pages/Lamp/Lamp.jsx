@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/category/lamp.jpg'
+import img from '../../assets/category/lamp.jpg'
 
 const Lamp = () => {
     const lamp = [

@@ -1,17 +1,15 @@
 import React, { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import Navbar from "./Components/Navbar/Navbar";
-import Layout from "./Pages/Layout";
-import Busket from "./Pages/Busket";
-import Lamp from "./Pages/Lamp";
-import HotDeal from "./Pages/HotDeal";
-import WallDecor from "./Pages/WallDecor";
+import Layout from "./Pages/Layout/Layout";
+import Busket from "./Pages/Busket/Busket";
+import Lamp from "./Pages/Lamp/Lamp";
+import HotDeal from "./Pages/HotDeal/HotDeal";
+import WallDecor from "./Pages/WallDecor/WallDecor";
 import Footer from "./Components/Footer/Footer";
-import Shop from "./Pages/Shop";
-import ProductDetail from "./Pages/ProductDetail";
-import About from "./Pages/About";
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import Shop from "./Pages/Shop/Shop";
+import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import About from "./Pages/About/About";
 
 
 export const productContext = createContext();
@@ -22,11 +20,7 @@ const App = () => {
   const [cart, setCart] = useState([]);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
-  useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  }, []);
+
 
   useEffect(() => {
     fetch("FakeData/product.json")
@@ -94,6 +88,7 @@ const App = () => {
   return (
     <productContext.Provider
       value={{
+        orderPlaced,
         handleOrder,
         handleUpdateQuantity,
         products,

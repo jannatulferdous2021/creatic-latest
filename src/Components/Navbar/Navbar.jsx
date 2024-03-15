@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
-import Cart from "../../Pages/Cart";
+import Cart from "../../Pages/Cart/Cart";
 import { productContext } from "../../App";
 
 const Navbar = () => {
@@ -14,9 +14,7 @@ const Navbar = () => {
     setNav(!nav);
   };
   const toggleCart = () => {
-    // Close nav if open when toggling the cart
     if (nav) setNav(false);
-    // Toggle the visibility of the cart content
     setShowCart(!showCart);
   };
 
@@ -84,7 +82,14 @@ const Navbar = () => {
           className="ml-3 lg:z-40 absolute sm:right-[40px] right-0 pb-10 top-[100px] sm:w-[30%]  w-[100%] rounded"
           style={{ backgroundColor: "#51CF48 " }}
         >
-          {/* Your Cart component goes here */}
+          <div className="flex justify-end">
+            <button onClick={() => setShowCart(false)}>
+              <AiOutlineClose
+                size={20}
+                className="text-white m-2 cursor-pointer"
+              />
+            </button>
+          </div>
           <Cart />
         </div>
       )}

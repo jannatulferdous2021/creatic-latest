@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/category/busket.jpg'
+import img from '../../assets/category/busket.jpg'
 
 const Busket = () => {
     const busket = [

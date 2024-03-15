@@ -1,9 +1,10 @@
 import React, { useContext, useState } from "react";
-import { productContext } from "../App";
+import { productContext } from "../../App";
 
 const Cart = () => {
 
   const {
+    orderPlaced,
     handleOrder,
     cart,
     handleRemove,
@@ -97,6 +98,13 @@ const Cart = () => {
         >
           Place Order
         </button>
+        {
+          orderPlaced && (
+            <div>
+              <h1 className="sm:text-[20px] ">Order Placed Successfully!</h1>
+            </div>
+          )
+        }
       </div>
     </>
   );

@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/category/offfer.webp'
+import img from '../../assets/category/offfer.webp'
 
 const HotDeal = () => {
     const busket = [
