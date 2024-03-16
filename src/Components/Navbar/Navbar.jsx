@@ -28,13 +28,13 @@ const Navbar = () => {
 
   console.log(totalQuantity);
   return (
-    <div className="bg-[#51CF48] text-white flex  justify-between items-center h-24  mx-auto px-4  ">
+    <div className=" pr-10 bg-[#51CF48] text-white flex  justify-between items-center h-24  mx-auto px-4  ">
       <h1 className="pl-10 text-3xl font-bold text-[black]">Creatic.</h1>
-      <ul className="hidden md:flex pr-10">
+      <ul className="hidden md:flex pr-10 sm:mr-[-700px]">
         <li className="p-4 sm:text-xl xl">
           <NavLink to="/"> Home </NavLink>
         </li>
-        <li className="p-4 sm:text-xl xl">
+        <li className="p-4 sm:text-xl">
           <NavLink to="/shop">Shop</NavLink>
         </li>
         <li className="p-4 sm:text-xl xl">
@@ -43,13 +43,13 @@ const Navbar = () => {
         <li className="p-4 sm:text-xl xl">
           <NavLink to="/contact"> Contact</NavLink>
         </li>
-        <button onClick={toggleCart} className="md:ml-4 ">
+      </ul>
+        <button onClick={toggleCart} className="md:ml-4 ml-[100px]  ">
           <NavLink>
             {" "}
             <sup className="mr-1 ">{totalQuantity}</sup>Cart
           </NavLink>
         </button>
-      </ul>
       <div onClick={handleNav} className="block md:hidden">
         {nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20} />}
       </div>
@@ -73,9 +73,6 @@ const Navbar = () => {
         <li className="p-4 border-b border-white-600">
           <NavLink to="/contact"> Contact</NavLink>
         </li>
-        <button onClick={toggleCart} className="p-4 border-b border-white-600">
-          <NavLink to="/cart"> Cart</NavLink>
-        </button>
       </ul>
       {showCart && (
         <div

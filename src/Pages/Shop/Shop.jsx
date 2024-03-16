@@ -8,7 +8,7 @@ const Shop = () => {
   return (
     <>
       <div>
-        <div className="flex justify-between align-middle text-white pt-3 pb-3 sm:text-[22px] text-[18px] pl-5 pr-5" style={{backgroundColor: "black"}}>
+        <div className="flex flex-wrap justify-between align-middle text-white pt-3 pb-3 sm:text-[22px] text-[18px] pl-5 pr-5" style={{backgroundColor: "black"}}>
           <div className="text-white">
             <h1>Total Products : {products.length}</h1>
           </div>
